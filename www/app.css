@@ -1,11 +1,37 @@
+body {
+  background-color: black;
+}
+
+.info {
+  color: white;
+}
+
+.summ {
+  color: white;
+  font-size: 12px;
+  word-wrap: break-word;
+}
+
 #movies {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
+
   align-items: stretch;
+  list-style: none;
 }
 
-/*#name {
+#movies li {
+  width: 20%;
+  padding: 0 24px 16px;
+  box-sizing: border-box;
+  text-align: justify;  
+}
+
+.name {
+  color: white;
   display: flex;
-  justify-content: center;
-}*/
+  justify-content: flex-start;
+  font-style: oblique;
+  font-weight: bold;
+}
