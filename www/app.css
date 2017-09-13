@@ -24,7 +24,7 @@ body {
   list-style: none;
 }
 
-@media screen and (min-width: 1000px) and (max-width: 1500px){
+@media screen and (min-width: 1000px) and (max-width: 2800px){
   #movies li {
     width: 20%;
     padding: 0 10px 16px;
