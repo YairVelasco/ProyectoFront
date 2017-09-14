@@ -12,6 +12,7 @@
     <script src="../../js/jszip.min.js"></script>
     <script src="../../js/kendo.all.min.js"></script>
     <script src="../content/shared/js/console.js"></script>
+    <script src="/js/app.js"> </script>
     <script>
 
     </script>
@@ -39,10 +40,15 @@
 
 <script>
 $(function() {
-    var shortMovies = "";
+    var shortMovies;
+    var test = 10;
     for (var i = 0; i < dataAjax.length; i++) {
-      shortMovies = {title: dataAjax[i].name, image: dataAjax[i].image.medium, imdb:         } 
+      console.log(i);
+      // var movieTime = new Date(dataAjax[i].premiered+" "+dataAjax[i].schedule.time);
+      // shortMovies += {title: dataAjax[i].name, image: dataAjax[i].image.medium, imdb: dataAjax[i].officialSite, start: new Date(dataAjax[i].premiered+" "+dataAjax[i].schedule.time), end: new Date(dataAjax[i].premiered+" "+(movieTime.getHours()+":"+(movieTime.getMinutes()+29)))};
+      // console.log(dataAjax[i].name);
     }
+
     $("#scheduler").kendoScheduler({
         date: new Date("2013/6/13"),
         startTime: new Date("2013/6/13 10:00"),

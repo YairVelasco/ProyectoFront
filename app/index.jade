@@ -5,14 +5,15 @@ html
     div#header 
       img(src="http://static.tvmaze.com/uploads/images/original_untouched/0/1.jpg")
     link(rel="stylesheet" type="text/css" href="/css/app.css")
+    //- script(src="/js/jquery.min.js")
+    //- script(src="/js/app.js") 
     meta(name='viewport', content='width=device-width, initial-scale=1')
   body
     include template.jade
-    
-      
-    script(src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js")  
+    script.
+      console.log(dataAjax);
+    script(src="/js/jquery.min.js")  
     script(src="/js/app.js") 
-  
        
   
   

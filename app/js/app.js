@@ -1,6 +1,6 @@
 
-var $movies = $('#movies'),
-    dataAjax = "";
+var $movies = $('#movies');
+var dataAjax = "";
 $(function(){
     $.ajax({
     type: 'GET',
@@ -9,7 +9,7 @@ $(function(){
       $.each(movies, function(i,movie){
         dataAjax = movies;
         var movieTime = new Date(movie.premiered+" "+movie.schedule.time);
-        console.log(movieTime.getHours()+":"+(movieTime.getMinutes()+30));
+        //console.log(movieTime.getHours()+":"+(movieTime.getMinutes()+30));
         //$movies.append('<li>Nombre' +movie.name+ '</li>','<li>Nombre' +movie.image.medium+ '</li>' );
         $movies.append(`<li><p class="name">${movie.name}</p>
         <div>
