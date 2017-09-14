@@ -1,3 +1,7 @@
+#header {
+  display: flex;
+  flex-direction: column; }
+
 body {
   background-color: black; }
 
@@ -47,3 +51,28 @@ body {
   justify-content: flex-start;
   font-style: oblique;
   font-weight: bold; }
+
+.movie-template img {
+  border-radius: 8px;
+  float: left;
+  margin: 0 8px;
+  width: 75px;
+  padding: 2px;
+  /*display: flex;
+    align-self: center;*/ }
+
+.movie-template p {
+  margin: 5px 0 0; }
+
+.movie-template h3 {
+  padding: 0 8px 5px;
+  font-size: 12px; }
+
+.movie-template a {
+  color: #ffffff;
+  font-weight: bold;
+  text-decoration: none; }
+
+.k-state-hover .movie-template a,
+.movie-template a:hover {
+  color: #000000; }

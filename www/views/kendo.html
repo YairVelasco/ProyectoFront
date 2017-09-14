@@ -1,0 +1,39 @@
+<a href="../index.html" class="offline-button">Back</a>
+<div id="example" class="k-content">
+  <div id="scheduler"></div>
+</div>
+<script id="event-template" type="text/x-kendo-template">
+  <div class="movie-template"><img src="#= image #"/>
+    <p>#: kendo.toString(start, "hh:mm") # - #: kendo.toString(end, "hh:mm") #</p>
+    <h3>#: title #</h3><a href="#= imdb #">Movie in IMDB</a>
+  </div>
+</script>
+<script>
+  $(function() {
+      var shortMovies = new Array();
+      for (var i = 0; i < dataAjax.length; i++) {
+        //console.log(i);
+        var movieTime = new Date(dataAjax[i].premiered+" "+dataAjax[i].schedule.time);   //
+        shortMovies.push({title: dataAjax[i].name, image: dataAjax[i].image.medium, imdb: dataAjax[i].officialSite, start: new Date(dataAjax[i].premiered+" "+dataAjax[i].schedule.time), end: new Date(dataAjax[i].premiered+" "+(movieTime.getHours()+1+":"+(movieTime.getMinutes()+29)))}) ;
+      }
+      // var obj = JSON.parse(shortMovies);
+      console.log(shortMovies);
+      $("#scheduler").kendoScheduler({
+          date: new Date("2013/6/24"),
+          startTime: new Date("2013/6/24 10:00"),
+          endTime: new Date("2013/6/24 23:59"),
+          height: 600,
+          views: [
+              "day",
+              { type: "workWeek", selected: false },
+              {type: "week", selected: true },
+              "month",
+              "agenda",
+              { type: "timeline", eventHeight: 50}
+          ],
+          editable: true,
+          eventTemplate: $("#event-template").html(),
+          dataSource: shortMovies
+      });
+  });
+</script>

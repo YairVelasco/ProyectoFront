@@ -7,7 +7,9 @@ var gulp = require('gulp'),
       style: {
         main: './app/sass/app.scss',
         watch: './app/**/*.scss',
-        output: './www/css'
+        output: './www/css',
+        style: './app/sass/*.scss',
+        styleOutput: './www/css'
       },
       js: {
         main: './app/js/app.js',

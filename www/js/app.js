@@ -5,10 +5,11 @@ var dataAjax = "";
 $(function () {
   $.ajax({
     type: 'GET',
+    async: false,
     url: 'http://api.tvmaze.com/shows',
     success: function success(movies) {
+      dataAjax = movies;
       $.each(movies, function (i, movie) {
-        dataAjax = movies;
         var movieTime = new Date(movie.premiered + " " + movie.schedule.time);
         //console.log(movieTime.getHours()+":"+(movieTime.getMinutes()+30));
         //$movies.append('<li>Nombre' +movie.name+ '</li>','<li>Nombre' +movie.image.medium+ '</li>' );

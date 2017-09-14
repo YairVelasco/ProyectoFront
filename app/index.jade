@@ -1,17 +1,27 @@
-
 doctype html
 html
   head
-    div#header 
-      img(src="http://static.tvmaze.com/uploads/images/original_untouched/0/1.jpg")
+    //- div#header 
+    //-   img(src="/images/1.jpg")
+    link(href="styles/site.css" rel="stylesheet" type="text/css")
+
     link(rel="stylesheet" type="text/css" href="/css/app.css")
-    //- script(src="/js/jquery.min.js")
-    //- script(src="/js/app.js") 
     meta(name='viewport', content='width=device-width, initial-scale=1')
   body
-    include template.jade
-    script.
-      console.log(dataAjax);
+    header
+      div.content-wrapper
+          //- div.float-left
+          //-     p.site-title
+          //-       a(href="/") your logo here
+          div.float-right
+              nav
+                ul#menu
+                    li
+                      a(href="index.html") Home
+                    li
+                      a(href="/views/movieScheduler2.html") Schedule
+    div
+      ul#movies
     script(src="/js/jquery.min.js")  
     script(src="/js/app.js") 
        
