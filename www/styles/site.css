@@ -136,15 +136,16 @@ ul#menu {
         display: inline;
         list-style: none;
         padding-left: 15px;
+        background: none;
+        color: #999;
+        text-decoration: none;
     }
 
         ul#menu li a {
-            background: none;
-            color: #999;
-            text-decoration: none;
+
         }
 
-        ul#menu li a:hover {
+        ul#menu li:hover {
             color: #333;
             text-decoration: none;
         }
@@ -259,15 +260,15 @@ aside {
     width: 25%;
 }
 
-    aside ul {
+    /*aside ul {
         list-style: none;
         padding: 0;
-    }
+    }*/
 
-        aside ul li {
+        /*aside ul li {
             background: url("../images/bullet.png") no-repeat 0 50%;
             padding: 2px 0 2px 20px;
-        }
+        }*/
 
 .label {
     font-weight: 700;
