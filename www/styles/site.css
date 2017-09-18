@@ -6,9 +6,9 @@
         color: #333;
     }
 
-    a:hover {
+    /*a:hover {
         background-color: #c7d1d6;
-    }
+    }*/
 
 
 mark {
@@ -18,11 +18,11 @@ mark {
 }
 
 .float-left {
-    float: left;
+    float: none;
 }
 
 .float-right {
-    float: right;
+    float: none;
 }
 
 .clear-fix:after {

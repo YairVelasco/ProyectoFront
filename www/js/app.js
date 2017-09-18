@@ -15,6 +15,7 @@ $(document).ready(function () {
 
   function printGrid() {
     //$movies.html("");
+    $('#calendar').html("");
     $.each(dataAjax, function (i, movie) {
       var movieTime = new Date(movie.premiered + " " + movie.schedule.time);
       //console.log(movieTime.getHours()+":"+(movieTime.getMinutes()+30));
